@@ -1,60 +1,58 @@
 <template>
   <v-app>
+    <div class="main" >
     <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
+  color="purple"
+  flat
+  outlined
+>
+ <v-avatar>
+      <img
+        src="https://cdn.vuetifyjs.com/images/john.jpg"
+        alt="vignesh"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+    </v-avatar>
 
-    <v-main>
-      <HelloWorld/>
-    </v-main>
+ <!-- <v-toolbar-title class="white--text" href="/home">Vigneshwaran</v-toolbar-title> -->
+  <v-btn color="white--text" text class="white--text" href="/home">
+          <h2>VIGNESHWARAN</h2></v-btn
+        >
+ <v-spacer></v-spacer>
+      <v-btn color="white--text" text class="white--text" href="/about">
+          About Me</v-btn
+        >
+      <v-btn color="white--text" text class="white--text" href="/myProjects">
+          My Project</v-btn
+        >
+       <v-btn color="white--text" text class="white--text" href="/contactMe">
+          Contact Me</v-btn
+        >
+</v-app-bar>
+      <router-view/>
+    </div>
+   <foot/> 
   </v-app>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
+import foot from "./components/foot.vue"
 export default {
-  name: 'App',
+name:"App",
+components:{
+  foot,
+}
+}
+</script>
+<style lang="scss" scoped>
+main{
+  background-color: #BDBDBD;
+}
+</style>
 
-  components: {
-    HelloWorld,
-  },
 
-  data: () => ({
-    //
-  }),
+<script>
+export default {
+ 
 };
 </script>
