@@ -1,4 +1,9 @@
 <template>
+ <v-parallax
+    dark
+     height="600"
+    src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+  >
 <div class="contact">
     <div class="left pa-12">
         <v-card    width="400" >
@@ -75,6 +80,7 @@
         </v-card>
       </div>
 </div>
+ </v-parallax>
 </template>
 
 <script>
