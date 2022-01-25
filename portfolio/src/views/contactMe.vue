@@ -1,7 +1,7 @@
 <template>
 <div class="contact">
     <div class="left pa-12">
-        <v-card    width="600" >
+        <v-card    width="400" >
         <h1 class="support">Contact Me</h1>
           <a href="mailto:bs.vigneshwaran@gmail.com" class="support-links">
             <p><v-icon>email</v-icon> :
@@ -96,6 +96,7 @@ export default {
 <style  lang="scss" scoped>
 .contact{
     display: flex;
+    justify-content: space-evenly;
 }
  .support {
       font-family: "Poppins", sans-serif;
@@ -116,7 +117,7 @@ export default {
       }
     }
     h1{
-        color: #F95700FF;
+        color: black;
         margin-left: 15px;
     }
     
