@@ -1,13 +1,22 @@
 <template>
  <v-parallax
+ height="580"
     dark
-     height="600"
     src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
   >
 <div class="contact">
     <div class="left pa-12">
         <v-card    width="400" >
         <h1 class="support">Contact Me</h1>
+         <a  class="support-links">
+            <p><v-icon>home</v-icon> :
+              <span> Salem , India</span>
+            </p>
+          </a>
+           <a  class="support-links">
+         <p>  <v-icon>pin</v-icon> :
+              <span>637502</span></p>
+           </a>
           <a href="mailto:bs.vigneshwaran@gmail.com" class="support-links">
             <p><v-icon>email</v-icon> :
               <span>bs.vigneshwaran@gmail.com</span>
@@ -18,21 +27,23 @@
               <b class="phone">(+91) 960 051 5207 </b>
             </p>
           </a>
-          <a href="tel:(+94) 638 221 9828" class="support-links">
+          <a href="tel:(+91) 123 456 7890" class="support-links">
             <p>
               <span>Feedback</span> :
               <v-icon>message</v-icon> 
-              <b class="phone">(+91) 638 221 9828 </b>
+              <b class="phone">(+91) 123 456 7890 </b>
             </p>
           </a>
         </v-card>
     </div>
       <div class="right pa-12">
-        <v-card width="600 " >
+        <v-card width="600">
           <v-form>
+               <h2 >Let Me Know About You</h2>
             <v-container>
               <v-row>
                 <v-col cols="12" sm="6">
+                 
                   <v-text-field
                     v-model="first"
                     label="First Name"
@@ -100,6 +111,7 @@ export default {
 </script>
 
 <style  lang="scss" scoped>
+
 .contact{
     display: flex;
     justify-content: space-evenly;
@@ -115,16 +127,25 @@ export default {
       font-size: 18px;
       margin-top: 20px;
 
-      p {
+      
+    }
+    p {
         color: #414040;
         font-weight: 400;
         font-size: 18px;
-        padding: 10px;
+        padding: 5px;
       }
+    v-icon{
+      padding: 5px;
     }
-    h1{
+    h1 , h2 ,h4{
         color: black;
-        margin-left: 15px;
+        margin: 15px;
+    }
+    .right{
+      h2{
+        margin-top: 15px;
+      }
     }
     
     @media (max-width: 780px) {

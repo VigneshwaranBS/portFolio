@@ -14,7 +14,7 @@
     </v-avatar>
 
  <!-- <v-toolbar-title class="white--text" href="/home">Vigneshwaran</v-toolbar-title> -->
-  <v-btn color="white--text" text class="white--text" href="/home">
+  <v-btn color="white--text" text class="white--text" href="/">
           <h2 class="subheading">VICKY</h2></v-btn
         >
  <v-spacer></v-spacer>
@@ -29,27 +29,26 @@
           v-on="on" href="/contactMe">
           Contact Me</v-btn
         >
-
-            
-     
 </v-app-bar>
   
-
-
-      <router-view />
+<router-view/>
     </div>
-
     <foot />
   </v-app>
 </template>
 
 <script>
-
+// import myProjects from "./views/myProjects.vue"
+// import contactMe from './views/contactMe.vue'
+// import carosoul from './views/carosoul.vue'
 import foot from "./components/foot.vue";
 export default {
   name: "App",
   components: {
     foot,
+    // contactMe,
+    // carosoul,
+    // myProjects,
   },
 };
 </script>

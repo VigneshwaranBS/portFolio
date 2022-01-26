@@ -4,7 +4,8 @@
       class="text-center"
       cols="12"
     >
-      {{ new Date().getFullYear() }} — <strong>VIGNESH</strong>
+       <strong>Copyright © 2022. All rights reserved.<br/>
+              Designed & Developed by VICKY </strong>
     </v-col>
   </v-footer>
 </template>

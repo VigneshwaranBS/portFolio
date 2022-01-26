@@ -1,32 +1,57 @@
 <template>
-  <v-parallax
-    dark
-     height="600"
-    src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-  >
-    <v-row
-      align="center"
-      justify="center"
-    >
-      <v-col
-        class="text-center"
-        cols="12"
+<v-carousel
+        cycle
+        height="580"
+        hide-delimiter-background
+        show-arrows-on-hover
       >
-        <h1 class="text-h2 font-weight-thin mb-4">
-        Vicky
-        </h1>
-        <h4 class="subheading">
-          My Portfolio
-        </h4>
-      </v-col>
-    </v-row>
-  </v-parallax>
+        <v-carousel-item
+          v-for="(image, i) in images"
+          :key="i"
+          :src="image.src"
+        >
+        </v-carousel-item>
+      </v-carousel>
+    <!-- <carosoul/> -->
+ 
 </template>
 
 <script>
-
+// import carosoul from './carosoul.vue'
 export default {
   name: 'Home',
+  components:{
+    // carosoul,
+  },
+   data () {
+      return {
+        colors: [
+          'indigo',
+          'warning',
+          'pink darken-2',
+          'red lighten-1',
+          'deep-purple accent-4',
+        ],
+        images: [
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+            // src:'1.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+            // src:'2.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+            // src:'logo.svg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+            // src:'4.jpg',
+          },
+        ],
+      }
+    },
   
 }
 </script>
