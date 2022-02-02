@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import About from "../views/About.vue"
 import contactMe from "../views/contactMe.vue"
 import projects from "../views/myProjects"
+import register from "../views/register.vue"
 
 
 Vue.use(VueRouter)
@@ -32,6 +33,13 @@ const routes = [
     name: 'myProjects',
     component: projects
   },
+
+  {
+    path: '/register',
+    name: 'register',
+    component: register
+  },
+
 ]
 
 const router = new VueRouter({

@@ -1,42 +1,42 @@
 <template>
-  <v-carousel cycle height="580" hide-delimiter-background show-arrows-on-hover>
-    <v-carousel-item v-for="(image, i) in images" :key="i" :src="image.src">
-      <v-row align="center" justify="center">
-      <v-col class="text-center mt-16" cols="12">
-        <h1 class="text-h2 white--text ">COMING SOON</h1>
-      </v-col>
-    </v-row>
-    </v-carousel-item>
-  </v-carousel>
+  <v-row justify="center" class="mt-12">
+    <v-col cols="4">
+      <v-card>
+        <v-card-text>
+          <lottie-player
+            src="https://assets7.lottiefiles.com/packages/lf20_jcikwtux.json"
+            background="transparent"
+            speed="1"
+            style="width: 500px; height: 300px"
+            loop
+            autoplay
+          ></lottie-player>
+          <v-text-field v-model="email" label="Email" outlined></v-text-field>
+
+          <v-text-field
+            v-model="password"
+            label="Password"
+            outlined
+          ></v-text-field>
+
+         <v-card-actions>
+        <v-btn text class="blue--text"> Login</v-btn>
+          
+          <v-spacer></v-spacer>
+         
+           <v-btn text class="orange--text" href="/register"> register</v-btn>
+        </v-card-actions>
+        </v-card-text>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
 export default {
-  name: "Home",
-  components: {},
-  data() {
-    return {
-      images: [
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
-          // src:'1.jpg',
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
-          // src:'2.jpg',
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
-          // src:'logo.svg',
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
-          // src:'4.jpg',
-        },
-      ],
-    };
-  },
+  name: "home",
 };
 </script>
-<style  lang="scss" scoped>
+
+<style lang="scss" scoped>
 </style>
